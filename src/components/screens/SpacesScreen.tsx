@@ -9,7 +9,7 @@ import {
   ShowerZoneRender,
   TerraceRender
 } from '../renders/ArchitecturalRenders';
-import { img } from '../lib/assets';
+import { img } from '../../lib/assets';
 import { ImageLightboxModal } from '../ImageLightboxModal';
 import { ARCHITECTURAL_ROOMS, ArchitecturalRoom } from '../../data/approvedSpaPlanData';
 

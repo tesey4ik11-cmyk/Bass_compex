@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { img } from '../lib/assets';
+import { img } from '../../lib/assets';
 import { PoolInteriorRender, PoolCausticsRender } from '../renders/ArchitecturalRenders';
 import { ImageLightboxModal } from '../ImageLightboxModal';
 

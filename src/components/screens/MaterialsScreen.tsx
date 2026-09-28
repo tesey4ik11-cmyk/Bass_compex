@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { img } from '../lib/assets';
+import { img } from '../../lib/assets';
 import { ImageLightboxModal } from '../ImageLightboxModal';
 
 export const MaterialsScreen: React.FC = () => {
