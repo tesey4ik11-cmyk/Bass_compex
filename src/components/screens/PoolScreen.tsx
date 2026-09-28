@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { img } from '../lib/assets';
 import { PoolInteriorRender, PoolCausticsRender } from '../renders/ArchitecturalRenders';
 import { ImageLightboxModal } from '../ImageLightboxModal';
 
@@ -255,7 +256,7 @@ export const PoolScreen: React.FC<Props> = ({ onExploreIn3D }) => {
       <ImageLightboxModal
         isOpen={lightboxOpen}
         onClose={() => setLightboxOpen(false)}
-        imageSrc="/images/pool_hall_10x10.jpg"
+        imageSrc={img('images/pool_hall_10x10.jpg')}
         title="Бассейновый зал • 256.0 м² • Чаша 10.0 × 10.0 м"
         subtitle="Панорамное витражное остекление в пол • Травертин R11 • Переливной лоток"
         specs={[

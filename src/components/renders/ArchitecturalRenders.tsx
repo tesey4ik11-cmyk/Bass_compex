@@ -1,3 +1,4 @@
+import { img } from '../../lib/assets';
 import React, { useState } from 'react';
 
 // ============================================================================
@@ -20,9 +21,9 @@ export const HeroExteriorRender: React.FC<RenderProps> = ({
   const [imageLoaded, setImageLoaded] = useState(false);
 
   const imageMap = {
-    twilight: '/images/hero_exterior_twilight.jpg',
-    day: '/images/hero_exterior_day.jpg',
-    night: '/images/hero_exterior_night.jpg'
+    twilight: img('images/hero_exterior_twilight.jpg'),
+    day: img('images/hero_exterior_day.jpg'),
+    night: img('images/hero_exterior_night.jpg')
   };
 
   const imageSrc = imageMap[timeOfDay] || imageMap.twilight;
@@ -75,7 +76,7 @@ export const PoolInteriorRender: React.FC<{ className?: string; onExpand?: () =>
       className={`relative w-full h-full overflow-hidden select-none bg-stone-950 group cursor-pointer ${className}`}
     >
       <img
-        src="/images/pool_hall_10x10.jpg"
+        src={img('images/pool_hall_10x10.jpg')}
         alt="Интерьер бассейнового зала с чашей 10х10 м"
         referrerPolicy="no-referrer"
         onLoad={() => setImageLoaded(true)}
@@ -112,7 +113,7 @@ export const PoolCausticsRender: React.FC<{ className?: string }> = ({ className
   return (
     <div className={`relative w-full h-full overflow-hidden select-none bg-cyan-950 ${className}`}>
       <img
-        src="/images/pool_water_caustics.jpg"
+        src={img('images/pool_water_caustics.jpg')}
         alt="Кристально чистая вода бассейна с переливом"
         referrerPolicy="no-referrer"
         onLoad={() => setImageLoaded(true)}
@@ -138,7 +139,7 @@ export const HamamInteriorRender: React.FC<{ className?: string; onExpand?: () =
       className={`relative w-full h-full overflow-hidden select-none bg-stone-950 group cursor-pointer ${className}`}
     >
       <img
-        src="/images/hamam_marble.jpg"
+        src={img('images/hamam_marble.jpg')}
         alt="Интерьер турецкого хамама с подогреваемым мраморным чебеком"
         referrerPolicy="no-referrer"
         onLoad={() => setImageLoaded(true)}
@@ -178,7 +179,7 @@ export const SaunaInteriorRender: React.FC<{ className?: string; onExpand?: () =
       className={`relative w-full h-full overflow-hidden select-none bg-stone-950 group cursor-pointer ${className}`}
     >
       <img
-        src="/images/sauna_cedar.jpg"
+        src={img('images/sauna_cedar.jpg')}
         alt="Финская сауна из канадского кедра с каменкой"
         referrerPolicy="no-referrer"
         onLoad={() => setImageLoaded(true)}
@@ -218,7 +219,7 @@ export const RussianBanyaRender: React.FC<{ className?: string; onExpand?: () =>
       className={`relative w-full h-full overflow-hidden select-none bg-stone-950 group cursor-pointer ${className}`}
     >
       <img
-        src="/images/russian_banya_stove.jpg"
+        src={img('images/russian_banya_stove.jpg')}
         alt="Русская парная высокой теплоемкости с печью"
         referrerPolicy="no-referrer"
         onLoad={() => setImageLoaded(true)}
@@ -257,7 +258,7 @@ export const LoungeInteriorRender: React.FC<{ className?: string; onExpand?: () 
       className={`relative w-full h-full overflow-hidden select-none bg-stone-950 group cursor-pointer ${className}`}
     >
       <img
-        src="/images/lounge_relaxation.jpg"
+        src={img('images/lounge_relaxation.jpg')}
         alt="Зона отдыха и лаундж с панорамным видом на сосны"
         referrerPolicy="no-referrer"
         onLoad={() => setImageLoaded(true)}
@@ -296,7 +297,7 @@ export const LockerRoomRender: React.FC<{ className?: string; onExpand?: () => v
       className={`relative w-full h-full overflow-hidden select-none bg-stone-950 group cursor-pointer ${className}`}
     >
       <img
-        src="/images/locker_room.jpg"
+        src={img('images/locker_room.jpg')}
         alt="Интерьер раздевального блока премиального уровня"
         referrerPolicy="no-referrer"
         onLoad={() => setImageLoaded(true)}
@@ -335,7 +336,7 @@ export const ShowerZoneRender: React.FC<{ className?: string; onExpand?: () => v
       className={`relative w-full h-full overflow-hidden select-none bg-stone-950 group cursor-pointer ${className}`}
     >
       <img
-        src="/images/shower_basalt.jpg"
+        src={img('images/shower_basalt.jpg')}
         alt="Душевая зона с отделкой темно-серым базальтом"
         referrerPolicy="no-referrer"
         onLoad={() => setImageLoaded(true)}
@@ -374,7 +375,7 @@ export const TerraceRender: React.FC<{ className?: string; onExpand?: () => void
       className={`relative w-full h-full overflow-hidden select-none bg-stone-950 group cursor-pointer ${className}`}
     >
       <img
-        src="/images/terrace_deck.jpg"
+        src={img('images/terrace_deck.jpg')}
         alt="Южная терраса 30.2х4.0 м с декингом из термоясеня"
         referrerPolicy="no-referrer"
         onLoad={() => setImageLoaded(true)}

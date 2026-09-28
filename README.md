@@ -1,20 +1,40 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+<h1>Банный SPA-комплекс 30.2 × 16.0 м</h1>
+<p>Презентация архитектурного прототипа премиального банного SPA-комплекса.
+Интерактивный 2D план и 3D модель, проверенные по чертежу BK-26-003-KR.</p>
 </div>
 
-# Run and deploy your AI Studio app
+## Что внутри
 
-This contains everything you need to run your app locally.
+- **Проект** — вводный экран с рендерами комплекса
+- **План** — интерактивный плановый чертёж с проверками соответствия нормам
+- **3D** — интерактивная 3D-модель помещений (Three.js)
+- **Пространства** — каталог помещений: хамам, сауна, русская баня, бассейн, террасы
+- **Бассейн** — зал 10×10 с технической обвязкой
+- **Материалы** — дерево, базальт, мрамор, мозаика
+- **Технические данные** — баланс площадей и нормативные проверки
 
-View your app in AI Studio: https://ai.studio/apps/13cb28c7-6d7e-4a92-8ff8-bb157c982a68
+## Локальный запуск
 
-## Run Locally
+Требуются Node.js и [Bun](https://bun.sh):
 
-**Prerequisites:**  Node.js
+```bash
+bun install
+bun run dev        # http://localhost:3000
+bun run lint       # tsc --noEmit
+bun run build      # сборка в dist/
+```
 
+## Деплой на GitHub Pages
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Публикация выполняется автоматически через GitHub Actions
+(`.github/workflows/deploy.yml`) при каждом push в ветку `main`:
+
+1. Репозиторий должен быть на GitHub.
+2. В **Settings → Pages → Build and deployment → Source** выберите **GitHub Actions**.
+3. Пуш в `main` соберёт сайт и опубликует на
+   `https://<user>.github.io/Bass_compex/`.
+
+`base` для подпапки уже задан как `/Bass_compex/` в `vite.config.ts`,
+а пути к изображениям идут через `import.meta.env.BASE_URL`,
+поэтому сайт корректно работает по адресу `https://<user>.github.io/Bass_compex/`.

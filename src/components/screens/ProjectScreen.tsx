@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { img } from '../../lib/assets';
 import { BUILDING_WIDTH, BUILDING_HEIGHT, POOL_BASIN } from '../../data/approvedSpaPlanData';
 
 interface Props {
@@ -7,7 +8,7 @@ interface Props {
 }
 
 export const ProjectScreen: React.FC<Props> = ({ onExplore }) => {
-  const [heroImage, setHeroImage] = useState<string>('/images/hero_exterior_twilight.png');
+  const [heroImage, setHeroImage] = useState<string>(img('images/hero_exterior_twilight.png'));
 
   // Load user image from localStorage if saved
   useEffect(() => {

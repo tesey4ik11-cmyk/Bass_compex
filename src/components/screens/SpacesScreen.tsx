@@ -9,6 +9,7 @@ import {
   ShowerZoneRender,
   TerraceRender
 } from '../renders/ArchitecturalRenders';
+import { img } from '../lib/assets';
 import { ImageLightboxModal } from '../ImageLightboxModal';
 import { ARCHITECTURAL_ROOMS, ArchitecturalRoom } from '../../data/approvedSpaPlanData';
 
@@ -30,7 +31,7 @@ export const SpacesScreen: React.FC<Props> = ({ onOpenRoomModal, onExploreIn3D }
       tagline: 'Тёплое влажное пространство с мягкой архитектурой света и каррарского мрамора.',
       temp: '45–50 °C',
       humidity: '95–100%',
-      imageSrc: '/images/hamam_marble.jpg',
+      imageSrc: img('images/hamam_marble.jpg'),
       renderComponent: (onExp: () => void) => <HamamInteriorRender className="w-full h-full" onExpand={onExp} />,
       features: [
         'Купольный свод со светодиодным "звездным небом"',
@@ -47,7 +48,7 @@ export const SpacesScreen: React.FC<Props> = ({ onOpenRoomModal, onExploreIn3D }
       tagline: 'Сухой термальный микроклимат в окружении натурального канадского кедра.',
       temp: '90–110 °C',
       humidity: '10–15%',
-      imageSrc: '/images/sauna_cedar.jpg',
+      imageSrc: img('images/sauna_cedar.jpg'),
       renderComponent: (onExp: () => void) => <SaunaInteriorRender className="w-full h-full" onExpand={onExp} />,
       features: [
         'Стеновые панели из бессучкового красного канадского кедра',
@@ -64,7 +65,7 @@ export const SpacesScreen: React.FC<Props> = ({ onOpenRoomModal, onExploreIn3D }
       tagline: 'Традиционная парная высокой теплоёмкости с кирпичной печью и мягким мелкодисперсным паром.',
       temp: '60–75 °C',
       humidity: '50–65%',
-      imageSrc: '/images/russian_banya_stove.jpg',
+      imageSrc: img('images/russian_banya_stove.jpg'),
       renderComponent: (onExp: () => void) => <RussianBanyaRender className="w-full h-full" onExpand={onExp} />,
       features: [
         'Массивная теплоаккумулирующая каменка 1 200 кг',
@@ -81,7 +82,7 @@ export const SpacesScreen: React.FC<Props> = ({ onOpenRoomModal, onExploreIn3D }
       tagline: 'Центральный распределительный холл с панорамным светом, камином и фито-баром.',
       temp: '22–24 °C',
       humidity: '40–50%',
-      imageSrc: '/images/lounge_relaxation.jpg',
+      imageSrc: img('images/lounge_relaxation.jpg'),
       renderComponent: (onExp: () => void) => <LoungeInteriorRender className="w-full h-full" onExpand={onExp} />,
       features: [
         'Сквозной портал 14.2 м, объединяющий парные и бассейновый зал',
@@ -98,7 +99,7 @@ export const SpacesScreen: React.FC<Props> = ({ onOpenRoomModal, onExploreIn3D }
       tagline: 'Монументальный стеклянный павильон с 10-метровым зеркалом воды и выходом на террасу.',
       temp: '28–30 °C (вода 28 °C)',
       humidity: '55–60%',
-      imageSrc: '/images/pool_hall_10x10.jpg',
+      imageSrc: img('images/pool_hall_10x10.jpg'),
       renderComponent: (onExp: () => void) => <PoolInteriorRender className="w-full h-full" onExpand={onExp} />,
       features: [
         'Монолитная чаша 10×10 м со скрытым переливным лотком',
@@ -115,7 +116,7 @@ export const SpacesScreen: React.FC<Props> = ({ onOpenRoomModal, onExploreIn3D }
       tagline: 'Функциональный гардеробный блок с отделкой термодеревом и прямым выходом в душевую.',
       temp: '23–25 °C',
       humidity: '40–50%',
-      imageSrc: '/images/locker_room.jpg',
+      imageSrc: img('images/locker_room.jpg'),
       renderComponent: (onExp: () => void) => <LockerRoomRender className="w-full h-full" onExpand={onExp} />,
       features: [
         'Индивидуальные шкафчики из темного дуба с электронными замками',
@@ -132,7 +133,7 @@ export const SpacesScreen: React.FC<Props> = ({ onOpenRoomModal, onExploreIn3D }
       tagline: 'Просторный гардеробный блок с туалетными столиками, мягкими банкетками и душевой группой.',
       temp: '23–25 °C',
       humidity: '40–50%',
-      imageSrc: '/images/locker_room.jpg',
+      imageSrc: img('images/locker_room.jpg'),
       renderComponent: (onExp: () => void) => <LockerRoomRender className="w-full h-full" onExpand={onExp} />,
       features: [
         'Индивидуальные гардеробные модули с зеркальной подсветкой',
@@ -149,7 +150,7 @@ export const SpacesScreen: React.FC<Props> = ({ onOpenRoomModal, onExploreIn3D }
       tagline: 'Санитарный узел с отделкой темно-графитовым базальтом и тропическими лейками.',
       temp: '24–26 °C',
       humidity: '70–80%',
-      imageSrc: '/images/shower_basalt.jpg',
+      imageSrc: img('images/shower_basalt.jpg'),
       renderComponent: (onExp: () => void) => <ShowerZoneRender className="w-full h-full" onExpand={onExp} />,
       features: [
         'Индивидуальные душевые кабины с верхним каскадным душем',
@@ -166,7 +167,7 @@ export const SpacesScreen: React.FC<Props> = ({ onOpenRoomModal, onExploreIn3D }
       tagline: 'Широкий деревянный настил вдоль всего южного фасада с подогревом и шезлонгами.',
       temp: 'На открытом воздухе',
       humidity: 'Естественная',
-      imageSrc: '/images/terrace_deck.jpg',
+      imageSrc: img('images/terrace_deck.jpg'),
       renderComponent: (onExp: () => void) => <TerraceRender className="w-full h-full" onExpand={onExp} />,
       features: [
         'Сплошной консольный навес вылетом 4.0 м для защиты от осадков',
