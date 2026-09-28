@@ -49,6 +49,7 @@ const uploadHeroPlugin: Plugin = {
 
 export default defineConfig(() => {
   return {
+    base: '/Bass_compex/'
     plugins: [react(), tailwindcss(), uploadHeroPlugin],
     resolve: {
       alias: {
